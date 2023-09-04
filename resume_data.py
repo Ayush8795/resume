@@ -358,7 +358,7 @@ def dict_maker(file_name):
     training_and_certif= get_trainings(text)
     projects,proj_desc= get_projects(text)
     
-    # print(name)
+   
     summary_dict= {
         'name': name,
         'educational_details': {'degrees': deg, 'college_details':clg,'cgpa':0},
@@ -380,7 +380,7 @@ def dict_maker(file_name):
 def json_maker(file_name):
     res_dict= dict_maker(file_name)
     path= 'resume_data.json'
-    pth= r'D:\hiremeclub\resume_data_getter-main'
+    pth= os.getcwd()
     path= os.path.join(pth,path)
     with open(path,'w') as file:
         json.dump(res_dict,file)
@@ -389,7 +389,7 @@ def json_maker(file_name):
 
 
 
-# print(json_maker(r'a.pdf'))
+
 
 
 
